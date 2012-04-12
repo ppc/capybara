@@ -12,6 +12,6 @@ Capybara.app = Rack::Builder.new do
   end
 end.to_app
 
-Capybara.asset_root = File.join(Rails.root, 'public')
-Capybara.save_and_open_page_path = File.join(Rails.root, 'tmp', 'capybara')
+Capybara.asset_root = Pathname.new File.join(Rails.root, 'public')
+Capybara.save_and_open_page_path = Pathname.new File.join(Rails.root, 'tmp', 'capybara')
 
